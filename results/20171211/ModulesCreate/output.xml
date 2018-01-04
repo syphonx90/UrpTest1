@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20171211 09:12:15.942" generator="Robot 3.0.2 (Python 2.7.9 on win32)">
+<suite source="C:\development\robot-scripts\urp\tests\Modules\sprint2_2.robot" id="s1" name="Sprint2 2">
+<test id="s1-t1" name="LogIn">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://10.0.1.47:8080/urp/urp/</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171211 09:12:20.170" level="INFO">Opening browser 'gc' to base url 'http://10.0.1.47:8080/urp/urp/'</msg>
+<status status="PASS" endtime="20171211 09:12:28.782" starttime="20171211 09:12:20.170"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20171211 09:12:33.796" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20171211 09:12:33.796" starttime="20171211 09:12:28.784"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="show_login_btn"]</arg>
+</arguments>
+<msg timestamp="20171211 09:12:33.796" level="INFO">Clicking button 'xpath=//*[@id="show_login_btn"]'.</msg>
+<status status="PASS" endtime="20171211 09:12:34.143" starttime="20171211 09:12:33.796"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20171211 09:12:37.153" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20171211 09:12:37.153" starttime="20171211 09:12:34.145"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=.//*[@id='login_form']/div[1]/div/div/div/input</arg>
+</arguments>
+<msg timestamp="20171211 09:12:37.153" level="INFO">Clicking element 'xpath=.//*[@id='login_form']/div[1]/div/div/div/input'.</msg>
+<status status="PASS" endtime="20171211 09:12:37.372" starttime="20171211 09:12:37.153"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20171211 09:12:40.377" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20171211 09:12:40.377" starttime="20171211 09:12:37.372"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>identifier=login</arg>
+<arg>${USER}</arg>
+</arguments>
+<msg timestamp="20171211 09:12:40.377" level="INFO">Typing text 'sranatunga@context1.com' into text field 'identifier=login'</msg>
+<status status="PASS" endtime="20171211 09:12:40.932" starttime="20171211 09:12:40.377"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20171211 09:12:43.945" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20171211 09:12:43.945" starttime="20171211 09:12:40.934"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=.//*[@id='pass-control']</arg>
+</arguments>
+<msg timestamp="20171211 09:12:43.945" level="INFO">Clicking button 'xpath=.//*[@id='pass-control']'.</msg>
+<status status="PASS" endtime="20171211 09:12:44.235" starttime="20171211 09:12:43.945"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20171211 09:12:47.257" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20171211 09:12:47.257" starttime="20171211 09:12:44.240"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>identifier=password</arg>
+<arg>${PW}</arg>
+</arguments>
+<msg timestamp="20171211 09:12:47.257" level="INFO">Typing text 'context@2017' into text field 'identifier=password'</msg>
+<status status="PASS" endtime="20171211 09:12:47.690" starttime="20171211 09:12:47.257"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20171211 09:12:50.695" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20171211 09:12:50.695" starttime="20171211 09:12:47.691"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20171211 09:12:50.695" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" endtime="20171211 09:12:51.032" starttime="20171211 09:12:50.695"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20171211 09:12:56.042" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20171211 09:12:56.042" starttime="20171211 09:12:51.034"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id='enw_menu']/li[6]/a</arg>
+</arguments>
+<msg timestamp="20171211 09:12:56.042" level="INFO">Clicking element 'xpath=//*[@id='enw_menu']/li[6]/a'.</msg>
+<status status="PASS" endtime="20171211 09:12:57.240" starttime="20171211 09:12:56.042"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20171211 09:13:02.257" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20171211 09:13:02.257" starttime="20171211 09:12:57.244"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id='datagrid-row-r2-2-2']/td[3]/div</arg>
+</arguments>
+<msg timestamp="20171211 09:13:02.257" level="INFO">Clicking element 'xpath=//*[@id='datagrid-row-r2-2-2']/td[3]/div'.</msg>
+<status status="PASS" endtime="20171211 09:13:02.513" starttime="20171211 09:13:02.257"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20171211 09:13:05.528" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20171211 09:13:05.528" starttime="20171211 09:13:02.517"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id='datagrid-row-r2-2-3']/td[3]/div</arg>
+</arguments>
+<msg timestamp="20171211 09:13:05.528" level="INFO">Clicking element 'xpath=//*[@id='datagrid-row-r2-2-3']/td[3]/div'.</msg>
+<status status="PASS" endtime="20171211 09:13:05.770" starttime="20171211 09:13:05.528"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20171211 09:13:10.774" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20171211 09:13:10.774" starttime="20171211 09:13:05.772"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id='edit_template_btn']</arg>
+</arguments>
+<msg timestamp="20171211 09:13:10.774" level="INFO">Clicking element 'xpath=//*[@id='edit_template_btn']'.</msg>
+<status status="PASS" endtime="20171211 09:13:12.197" starttime="20171211 09:13:10.774"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20171211 09:13:17.231" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20171211 09:13:17.231" starttime="20171211 09:13:12.198"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id='datagrid-row-r1-2-0']/td[2]/div</arg>
+</arguments>
+<msg timestamp="20171211 09:13:17.574" level="INFO">Clicking element 'xpath=//*[@id='datagrid-row-r1-2-0']/td[2]/div'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20171211 09:13:25.749" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=62.0.3202.94)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+<status status="FAIL" endtime="20171211 09:13:25.749" starttime="20171211 09:13:21.677"></status>
+</kw>
+<msg timestamp="20171211 09:13:25.749" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=62.0.3202.94)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+<msg timestamp="20171211 09:13:25.764" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=62.0.3202.94)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+<status status="FAIL" endtime="20171211 09:13:25.764" starttime="20171211 09:13:17.574"></status>
+</kw>
+<doc>This is the valid test for LogIn and LogOff with both correct user anad password</doc>
+<status status="FAIL" endtime="20171211 09:13:25.764" critical="yes" starttime="20171211 09:12:20.170">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=62.0.3202.94)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</status>
+</test>
+<test id="s1-t2" name="LogOff">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="logout_form"]/button</arg>
+</arguments>
+<msg timestamp="20171211 09:13:25.780" level="INFO">Clicking button 'xpath=//*[@id="logout_form"]/button'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20171211 09:13:33.970" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=62.0.3202.94)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+<status status="FAIL" endtime="20171211 09:13:33.970" starttime="20171211 09:13:29.852"></status>
+</kw>
+<msg timestamp="20171211 09:13:33.970" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=62.0.3202.94)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+<msg timestamp="20171211 09:13:33.986" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=62.0.3202.94)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+<status status="FAIL" endtime="20171211 09:13:33.986" starttime="20171211 09:13:25.780"></status>
+</kw>
+<status status="FAIL" endtime="20171211 09:13:33.986" critical="yes" starttime="20171211 09:13:25.780">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=62.0.3202.94)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" endtime="20171211 09:13:34.001" starttime="20171211 09:12:15.958"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="0">Critical Tests</stat>
+<stat fail="2" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Sprint2 2" pass="0">Sprint2 2</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20171211 09:13:25.749" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=62.0.3202.94)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+<msg timestamp="20171211 09:13:33.970" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=62.0.3202.94)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+</errors>
+</robot>

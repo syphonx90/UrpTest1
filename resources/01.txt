@@ -1,0 +1,81 @@
+-- create first table used for SO and SO QC
+--DROP FUNCTION IF EXISTS pg_temp.so_extraction_standard (varchar, varchar);
+CREATE OR REPLACE FUNCTION pg_temp.so_extraction_standard (intel_schema varchar, bplist varchar) returns character varying as
+$BODY$ 
+
+DECLARE
+return_query varchar;
+startdate varchar;
+enddate varchar;
+
+BEGIN
+-- get dates from report_dates table
+EXECUTE 'SELECT start_date FROM ' || intel_schema || '.report_dates limit 1;'
+    INTO startdate;
+EXECUTE 'SELECT end_date FROM ' || intel_schema || '.report_dates limit 1;'
+    INTO enddate;
+
+    return_query  = '
+    
+        -- sales out extraction and filtering from PEx
+        drop table if exists ' || intel_schema || '.so_step1_standard;
+        CREATE TABLE ' || intel_schema || '.so_step1_standard as
+        SELECT
+            year,
+            month,
+            country_id,
+            country_name,
+            country_standard as intel_country_code,
+            intel_cpu_name,
+            intel_form_factor AS form_factor,
+            vendor_standard as oem,
+            processor_model,
+            company_name,
+            oem_model_number,
+            intel_form_factor,
+            intel_form_factor AS customer_form_factor,
+            operating_system_intel,
+            intel_screen_size,
+            --tio,
+            CASE WHEN product_category_standard IN (''Desktop'', ''Notebook'') THEN NULL
+                WHEN tio = ''Yes'' THEN ''2in1''
+                WHEN form_factor = ''All-in-One Desktop'' THEN ''AIO''
+                ELSE ''None'' END AS tio,
+            touchscreen,
+            NULL::NUMERIC(12,2) AS spp,
+            intel_week,
+            mcp_flag,
+            business_id,
+            --------- For other reports
+            source_part_no,
+            ean_rf,
+            --------- For separating into companies
+            datasource_id,
+            bpl_company,            
+            --------- Aggregations
+            SUM(day_units) AS total_quantity
+        
+        FROM ' || intel_schema ||'.pex_distributed_units
+        WHERE TRUE
+        AND datasource_id IN (' || bplist || ')
+        AND day_date &gt;= ''' || startdate || ''' --- ********** FILTER/VARIABLE
+        AND day_date &lt;= ''' || enddate || ''' --- ********** FILTER/VARIABLE
+        AND day_date &gt;= COALESCE(bpl_valid_from::DATE, ''1999-01-01''::DATE) --- ********** FILTER/VARIABLE
+        AND day_date &lt;= COALESCE(bpl_valid_to::DATE, NOW()::DATE) --- ********** FILTER/VARIABLE
+        AND live
+        AND processor_vendor = ''Intel'' -- processor_vendor: Intel Products
+        GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
+        HAVING SUM(units) != 0
+        ;
+        ';
+
+        EXECUTE return_query;
+        
+        EXECUTE 'UPDATE ' || intel_schema || '.so_step1_standard SET mcp_flag = NULL WHERE mcp_flag ilike ''no'';';
+    -- Create table with the list of companies in the SO table for splitting the data  --- This and the splitting is a remnant from the old Intel reports that required to the csv's to be outputted with a special header and format
+RETURN return_query;
+END;
+$BODY$ 
+LANGUAGE plpgsql;
+
+select pg_temp.so_extraction_standard('${schema_intel}', '${bps}');

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20171030 10:18:15.910" generator="Robot 3.0.2 (Python 2.7.9 on win32)">
+<suite source="C:\development\robot-scripts\urp\tests\Template\Template_create.robot" id="s1" name="Template create">
+<test id="s1-t1" name="LogIn">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://10.0.1.47:8080/urp/urp/</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20171030 10:18:16.519" level="INFO">Opening browser 'gc' to base url 'http://10.0.1.47:8080/urp/urp/'</msg>
+<status status="PASS" endtime="20171030 10:18:23.682" starttime="20171030 10:18:16.519"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20171030 10:18:28.899" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20171030 10:18:28.899" starttime="20171030 10:18:23.859"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="show_login_btn"]</arg>
+</arguments>
+<msg timestamp="20171030 10:18:28.899" level="INFO">Clicking button 'xpath=//*[@id="show_login_btn"]'.</msg>
+<status status="PASS" endtime="20171030 10:18:29.196" starttime="20171030 10:18:28.899"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20171030 10:18:34.203" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20171030 10:18:34.203" starttime="20171030 10:18:29.197"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="login_form"]/div[1]/div/div/input</arg>
+</arguments>
+<msg timestamp="20171030 10:18:34.203" level="INFO">Clicking element 'xpath=//*[@id="login_form"]/div[1]/div/div/input'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20171030 10:18:34.535" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20171030 10:18:34.535" starttime="20171030 10:18:34.250"></status>
+</kw>
+<msg timestamp="20171030 10:18:34.535" level="FAIL">ValueError: Element locator 'xpath=//*[@id="login_form"]/div[1]/div/div/input' did not match any elements.</msg>
+<status status="FAIL" endtime="20171030 10:18:34.535" starttime="20171030 10:18:34.203"></status>
+</kw>
+<doc>This is the valid test for LogIn and LogOff with both correct user anad password</doc>
+<status status="FAIL" endtime="20171030 10:18:34.535" critical="yes" starttime="20171030 10:18:16.519">ValueError: Element locator 'xpath=//*[@id="login_form"]/div[1]/div/div/input' did not match any elements.</status>
+</test>
+<test id="s1-t2" name="Create Template">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="enw_menu"]/li[5]/a</arg>
+</arguments>
+<msg timestamp="20171030 10:18:34.535" level="INFO">Clicking element 'xpath=//*[@id="enw_menu"]/li[5]/a'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20171030 10:18:34.864" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20171030 10:18:34.864" starttime="20171030 10:18:34.586"></status>
+</kw>
+<msg timestamp="20171030 10:18:34.864" level="FAIL">ValueError: Element locator 'xpath=//*[@id="enw_menu"]/li[5]/a' did not match any elements.</msg>
+<status status="FAIL" endtime="20171030 10:18:34.864" starttime="20171030 10:18:34.535"></status>
+</kw>
+<status status="FAIL" endtime="20171030 10:18:34.864" critical="yes" starttime="20171030 10:18:34.535">ValueError: Element locator 'xpath=//*[@id="enw_menu"]/li[5]/a' did not match any elements.</status>
+</test>
+<test id="s1-t3" name="LogOff">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="logout_form"]/button</arg>
+</arguments>
+<msg timestamp="20171030 10:18:34.896" level="INFO">Clicking button 'xpath=//*[@id="logout_form"]/button'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20171030 10:18:35.302" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20171030 10:18:35.302" starttime="20171030 10:18:34.990"></status>
+</kw>
+<msg timestamp="20171030 10:18:35.308" level="FAIL">ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</msg>
+<status status="FAIL" endtime="20171030 10:18:35.309" starttime="20171030 10:18:34.896"></status>
+</kw>
+<status status="FAIL" endtime="20171030 10:18:35.310" critical="yes" starttime="20171030 10:18:34.881">ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 6.1.7601 SP1 x86_64)
+</status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" endtime="20171030 10:18:35.345" starttime="20171030 10:18:15.926"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="3" pass="0">Critical Tests</stat>
+<stat fail="3" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="3" id="s1" name="Template create" pass="0">Template create</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

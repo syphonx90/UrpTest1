@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170914 10:32:47.158" generator="Robot 3.0.2 (Python 2.7.9 on win32)">
+<suite source="C:\development\robot-scripts\urp\tests\Modules\Delete.robot" id="s1" name="Delete">
+<test id="s1-t1" name="LogIn">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://10.0.1.47:8080/urp/urp/</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170914 10:32:47.533" level="INFO">Opening browser 'gc' to base url 'http://10.0.1.47:8080/urp/urp/'</msg>
+<status status="PASS" endtime="20170914 10:32:55.541" starttime="20170914 10:32:47.533"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20170914 10:33:00.562" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170914 10:33:00.562" starttime="20170914 10:32:55.548"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="show_login_btn"]</arg>
+</arguments>
+<msg timestamp="20170914 10:33:00.562" level="INFO">Clicking button 'xpath=//*[@id="show_login_btn"]'.</msg>
+<status status="PASS" endtime="20170914 10:33:00.692" starttime="20170914 10:33:00.562"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20170914 10:33:05.693" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170914 10:33:05.693" starttime="20170914 10:33:00.692"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="login_form"]/div[1]/div/div/input</arg>
+</arguments>
+<msg timestamp="20170914 10:33:05.694" level="INFO">Clicking element 'xpath=//*[@id="login_form"]/div[1]/div/div/input'.</msg>
+<status status="PASS" endtime="20170914 10:33:05.882" starttime="20170914 10:33:05.694"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20170914 10:33:10.894" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170914 10:33:10.894" starttime="20170914 10:33:05.883"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>identifier=login</arg>
+<arg>${USER}</arg>
+</arguments>
+<msg timestamp="20170914 10:33:10.894" level="INFO">Typing text 'sranatunga@context1.com' into text field 'identifier=login'</msg>
+<status status="PASS" endtime="20170914 10:33:11.315" starttime="20170914 10:33:10.894"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20170914 10:33:16.329" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170914 10:33:16.329" starttime="20170914 10:33:11.316"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="login_form"]/div[2]/div/div/input</arg>
+</arguments>
+<msg timestamp="20170914 10:33:16.329" level="INFO">Clicking button 'xpath=//*[@id="login_form"]/div[2]/div/div/input'.</msg>
+<status status="PASS" endtime="20170914 10:33:16.413" starttime="20170914 10:33:16.329"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20170914 10:33:21.419" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170914 10:33:21.419" starttime="20170914 10:33:16.414"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>identifier=password</arg>
+<arg>${PW}</arg>
+</arguments>
+<msg timestamp="20170914 10:33:21.419" level="INFO">Typing text 'context@2017' into text field 'identifier=password'</msg>
+<status status="PASS" endtime="20170914 10:33:21.646" starttime="20170914 10:33:21.419"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20170914 10:33:26.652" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170914 10:33:26.652" starttime="20170914 10:33:21.646"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20170914 10:33:26.652" level="INFO">Clicking button 'Login'.</msg>
+<status status="PASS" endtime="20170914 10:33:26.794" starttime="20170914 10:33:26.652"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20170914 10:33:31.796" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20170914 10:33:31.796" starttime="20170914 10:33:26.795"></status>
+</kw>
+<doc>This is the valid test for LogIn and LogOff with both correct user anad password</doc>
+<status status="PASS" endtime="20170914 10:33:31.797" critical="yes" starttime="20170914 10:32:47.533"></status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="PASS" endtime="20170914 10:33:31.801" starttime="20170914 10:32:47.174"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Delete" pass="1">Delete</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
